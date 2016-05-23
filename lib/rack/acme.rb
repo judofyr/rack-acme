@@ -84,15 +84,15 @@ module Rack
       end
 
       def [](key)
-        @redis.get(prefix+key)
+        @redis.get(@prefix+key)
       end
 
       def []=(key, value)
-        @redis.set(prefix+key, value)
+        @redis.set(@prefix+key, value)
       end
 
       def delete(key)
-        @redis.del(prefix+key)
+        @redis.del(@prefix+key)
       end
     end
   end
